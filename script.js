@@ -10,7 +10,7 @@
 var humanScore = 0;
 var computerScore = 0;
 
-function randomHandSignal() {
+function getComputerChoice() {
   let randomVal = Math.floor(Math.random() * 3);
   let handSignal;
   if (randomVal == 1) {
@@ -28,15 +28,6 @@ function getHumanChoice() {
   return choice;
 }
 
-/*
-- rock = 1 
-- paper = 2
-- scissors = 3
-- rock <> scissors = rock
-- paper <> rock = paper
-- scissors <> paper = scissors
-*/
-
 function playRound(humanChoice, computerChoice) {
   if (
     (humanChoice == "rock" && computerChoice == "scissors") ||
@@ -50,13 +41,19 @@ function playRound(humanChoice, computerChoice) {
     (computerChoice == "scissors" && humanChoice == "paper")
   ) {
     computerScore++;
-  } else {
-    humanScore++;
-    computerScore++;
-  }
+  } 
 
   console.log(`Human: ${humanChoice} , Computer: ${computerChoice}`);
   console.log(`HumanScore: ${humanScore} , ComputerScore: ${computerScore}`);
+}
+
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    console.log(i);
+  }
 
   if (humanScore > computerScore) {
     console.log("You won");
@@ -67,4 +64,4 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-playRound(getHumanChoice(), randomHandSignal());
+playGame();
