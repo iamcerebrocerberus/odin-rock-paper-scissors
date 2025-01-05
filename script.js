@@ -24,8 +24,12 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let choice = prompt("Enter Hand Signal: ").toLowerCase();
-  return choice;
+  let choice = prompt("Enter Your Choice: ").toLowerCase();
+  if (choice == "rock" || choice == "paper" || choice == "scissors") {
+    return choice;
+  } else {
+    choice = prompt("Enter The Right Choice: ").toLowerCase();
+  }
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -41,7 +45,7 @@ function playRound(humanChoice, computerChoice) {
     (computerChoice == "scissors" && humanChoice == "paper")
   ) {
     computerScore++;
-  } 
+  }
 
   console.log(`Human: ${humanChoice} , Computer: ${computerChoice}`);
   console.log(`HumanScore: ${humanScore} , ComputerScore: ${computerScore}`);
