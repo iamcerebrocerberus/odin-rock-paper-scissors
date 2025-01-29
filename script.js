@@ -26,7 +26,7 @@ var computerScore = 0;
 
 function getSelectedChoice(event) {
   if (!gameActive) return;
-  let humanChoice = event.target.dataset.choice;
+  var humanChoice = event.target.dataset.choice;
   roundCount++;
 
   if (roundCount > NUM_OF_ROUNDS) {
@@ -40,8 +40,8 @@ function getSelectedChoice(event) {
 }
 
 function getComputerChoice() {
-  let randomVal = Math.floor(Math.random() * 3);
-  let handSignal;
+  var randomVal = Math.floor(Math.random() * 3);
+  var handSignal;
   if (randomVal == 1) {
     handSignal = "rock";
   } else if (randomVal == 2) {
