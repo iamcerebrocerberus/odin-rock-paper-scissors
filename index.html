@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
     <style>
       body {
         display: flex;
@@ -14,25 +16,63 @@
       .selection {
         flex-direction: row;
       }
+
+      .choice {
+        cursor: pointer;
+      }
+      .container {
+        display: flex;
+        gap: 2rem;
+      }
+      .container div {
+        font-size: 4rem;
+      }
+
+      button {
+        outline: 0;
+        border: 0;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-block-start: 2rem;
+      }
+      .selection,
+      .scores {
+        text-align: center;
+      }
+      .select__choice,
+      .scores__player {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.2rem;
+      }
+      .winner {
+        font-size: 2rem;
+      }
     </style>
   </head>
   <body>
     <h1>Rock, Paper, Scissors Game</h1>
     <div class="selection">
-      <p>You: <span class="your-choice">choose</span></p>
-      <p>Computer: <span class="computer-choice">choose</span></p>
+      <h2>Choice</h2>
+      <div class="select__choice">
+        <p>You: <span class="your-choice">choose</span></p>
+        <p>Computer: <span class="computer-choice">choose</span></p>
+      </div>
     </div>
     <div class="scores">
-      <p>You: <span class="your-score">0</span></p>
-      <p>Computer: <span class="computer-score">0</span></p>
+      <h2>Scores</h2>
+      <div class="scores__player">
+        <p>You: <span class="your-score">0</span></p>
+        <p>Computer: <span class="computer-score">0</span></p>
+      </div>
     </div>
     <p class="winner"></p>
     <div class="container">
-      <div data-choice="rock" class="choice">Rock</div>
-      <div data-choice="paper" class="choice">Paper</div>
-      <div data-choice="scissors" class="choice">Scissors</div>
+      <div data-choice="rock" class="choice">🪨</div>
+      <div data-choice="paper" class="choice">📄</div>
+      <div data-choice="scissors" class="choice">✂️</div>
     </div>
     <button class="reset-button">Reset Game</button>
     <script src="./script.js"></script>
-  </body>
+</body>
 </html>
