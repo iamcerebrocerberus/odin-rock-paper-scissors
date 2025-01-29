@@ -7,18 +7,18 @@
 - scissors <> paper = scissors
 */
 
-var choices = Array.from(document.querySelectorAll(".choice"));
-var yourScoreElem = document.querySelector(".your-score");
-var computerScoreElem = document.querySelector(".computer-score");
-var yourChoiceElem = document.querySelector(".your-choice");
-var computerChoiceElem = document.querySelector(".computer-choice");
-var resetButton = document.querySelector(".reset-button");
-var winnerElem = document.querySelector(".winner");
-var defaultScore = 0;
-var defaultChoice = "choose";
+const choices = Array.from(document.querySelectorAll(".choice"));
+const yourScoreElem = document.querySelector(".your-score");
+const computerScoreElem = document.querySelector(".computer-score");
+const yourChoiceElem = document.querySelector(".your-choice");
+const computerChoiceElem = document.querySelector(".computer-choice");
+const resetButton = document.querySelector(".reset-button");
+const winnerElem = document.querySelector(".winner");
+const defaultScore = 0;
+const defaultChoice = "choose";
+const NUM_OF_ROUNDS = 10;
 
 var roundCount = 0;
-const NUM_OF_ROUNDS = 10;
 var gameActive = true;
 
 var humanScore = 0;
