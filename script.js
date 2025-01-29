@@ -32,8 +32,6 @@ function getSelectedChoice(event) {
   if (roundCount > NUM_OF_ROUNDS) {
     let winner = checkWinner(humanScore, computerScore);
     winnerElem.textContent = winner;
-    console.log("hi");
-    console.log(winner);
     gameActive = false;
     return;
   }
@@ -71,8 +69,6 @@ function playRound(humanChoice, computerChoice) {
     computerScore++;
   }
 
-  console.log(`Human: ${humanChoice} , Computer: ${computerChoice}`);
-  console.log(`Human: ${humanScore} , Computer: ${computerScore}`);
   yourScoreElem.textContent = humanScore;
   computerScoreElem.textContent = computerScore;
 }
